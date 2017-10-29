@@ -1,0 +1,50 @@
+@font-face{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 0
+}
+nav{
+    background: #F0642C; 
+}
+.menu{
+    text-align: center;
+    margin: 0
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu li{
+    display: inline-block;
+}
+ul li:hover ul li{
+    display: block;
+}
+.menu a{
+    padding: 30px;
+    color: white;
+    text-decoration: none;
+    display: block
+}
+.menu a:hover{
+    background: #F19F5B
+}
+.gris{
+    background: #333333;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 50px
+}
+.foto{
+    height: 700px;
+    align:cover;
+    background: url(../css/imagenes/pro1.jpg);no-repeat;
+}
+
+.footer{
+    background: #F19F5B;
+    overflow: hidden;
+    padding: 60px;
+    text-align: center;
+    color: white
+}

@@ -1,0 +1,25 @@
+body{
+    margin: 0
+}
+nav{
+    background: #FA7436;
+    text-align: center;
+}
+.menu{
+    text-align: center;
+    margin: 0
+}
+
+.menu li{
+    display: inline-block;
+}
+.menu a{
+    padding: 30px;
+    color: white;
+    text-decoration: none;
+    display: block
+}
+
+.menu a:hover{
+    background: #F78250
+}

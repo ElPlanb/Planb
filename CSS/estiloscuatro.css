@@ -1,0 +1,43 @@
+body{
+    margin: 0
+}
+nav{
+    background: #F0642C; 
+}
+.menu{
+    text-align: center;
+    margin: 0
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu li{
+    display: inline-block;
+}
+ul li:hover ul li{
+    display: block;
+}
+.menu a{
+    padding: 30px;
+    color: white;
+    text-decoration: none;
+    display: block
+}
+.menu a:hover{
+    background: #F19F5B
+}
+
+.foto{
+    height: 1120px;
+    align:cover;
+    background: url(../css/imagenes/publicidad.jpg);no-repeat;
+
+}
+
+
+.footer{
+    background: #F19F5B;
+    overflow: hidden;
+    padding: 60px;
+    text-align: center;
+    color: white
+}

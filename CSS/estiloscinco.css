@@ -1,0 +1,79 @@
+body{
+    margin: 0
+}
+nav{
+    background: #F0642C; 
+}
+.menu{
+    text-align: center;
+    margin: 0
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu li{
+    display: inline-block;
+}
+ul li:hover ul li{
+    display: block;
+}
+.menu a{
+    padding: 30px;
+    color: white;
+    text-decoration: none;
+    display: block
+}
+.menu a:hover{
+    background: #F19F5B
+}
+.bienvenidos{
+    background: #333333;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 50px
+}
+.foto{
+    height: 1000px;
+    align:cover;
+    background: url(../css/imagenes/amarilla.jpg);no-repeat;
+}
+.dos_col{
+    width: 1024px;
+    margin: auto
+}
+.dos_col .col_left{
+    width: 600px;
+    vertical-align: top
+}
+.dos_col .col_right{
+    width: 400px;
+    vertical-align: top
+}
+.tres_col{
+    
+    color: white;
+    width: 1024px;
+    margin: auto
+
+}
+
+.tres_col a{
+    color:white;
+}
+.col{
+    display: inline-block;
+}
+.tres_col .col{
+    width: 330px
+}
+
+.tres_col_wrapper{
+    background: #1E1B1A;
+}
+.footer{
+    background: #F19F5B;
+    overflow: hidden;
+    padding: 60px;
+    text-align: center;
+    color: white
+}

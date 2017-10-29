@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+       <title>Elplanb</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="Expires" content="0">
+       <meta http-equiv="Last-Modified" content="0">
+       <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+       <meta http-equiv="Pragma" content="no-cache">
+       <link rel="shortcut icon" href="favicon.ico">
+       <link rel="mask-icon" href="img/website_icon.svg" color="#54bfb6">
+       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+       <link href="js/pickadate/themes/default.css" rel="stylesheet">
+       <link href="js/pickadate/themes/default.date.css" rel="stylesheet">
+       <link href="js/pickadate/themes/default.time.css" rel="stylesheet">
+       <link href="js/intl-tel-input/intlTelInput.css" rel="stylesheet">
+       <link rel="stylesheet" href="js/bootstrap-switch/bootstrap-switch.min.css">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="css/bootstrap-sortable.css">
+       <link rel="stylesheet" href="css/carrier.css">
+       <link rel="stylesheet" href="css/icons.css">
+       <style type="text/css">
+         body {
+           padding-top: 50px;
+         }
+       </style>
+   </head>
+   <body>
+       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+           <div class="container">
+               <div class="navbar-header">
+                   <button type="button" class="navbar-toggle" data-toggle="collapse"data-target=".navbar-collapse"
+                   <span class="sr-only"> Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   </button>
+                   <a class="navbar-brand" herf="#">El plan b de bici</a>
+                   </div>
+                   <div class="collapse navbar-collapse">
+                       <ul class="nav navbar-nav navar-right">
+                           <li id="navtab-users">
+                               <a role="button" data-toggle="dropdown" data-target="#" herf="">
+                                   <span data-i18n="main.menu.couriers"></span>
+                                   <span class="caret"></span>
+                               </a>
+                               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                   <li>
+                                       <a href="#courier/map" data-i18n="main.menu.couriersMap"></a>
+                                   </li>
+                                   <li>
+                                       <a href="#customer/list" data-i18n="main.menu.customers "></a>
+                                       </li>
+                               </ul>
+                           </li>
+                           <li id="navtab-customers">
+                                <a href="#customer/list" data-i18n="main.menu.customers"></a>
+                                <!--<p data-i18n="main.menu.customers" class="navbar-text" style="text-transform: uppercase"></p>-->
+                              </li>
+                              <li id="navtab-parcels" class="dropdown">
+                                    <a role="button" data-toggle="dropdown" data-target="#" href="">
+                                      <span data-i18n="main.menu.parcels"></span>
+                                      <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                            <li id="newParcel">
+                                              <a href="#parcel/newType" data-i18n="main.menu.parcelsRequest"></a>
+                                            </li>
+                                            <li>
+                                              <a href="#parcel/ongoing" data-i18n="main.menu.parcelsOngoing"></a>
+                                            </li>
+                                            <li>
+                                              <a href="#parcel/historyList" data-i18n="main.menu.parcelsHistory"></a>
+                                            </li>
+                                          </ul>
+                              </li>
+                              <li id="navtab-invoices">
+                                    <p data-i18n="main.menu.invoices" class="navbar-text" style="text-transform: uppercase"></p>
+                                  </li>
+                                  <li id="navtab-settings">
+                                    <a href="#settings" data-i18n="main.menu.settings"></a>
+                                  </li>
+                                  <li id="navtab-me" class="dropdown">
+                                    <a role="button" data-toggle="dropdown" data-target="#" href="">
+                                      <i class="fa fa-user"></i> <span id="menuUserNameText"></span>
+                                      <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                      <li>
+                                        <a href="#profile/updatePassword" data-i18n="main.menu.changePassword"></a>
+                                      </li>
+                                      <li>
+                                            <a href="javascript:logout()" data-i18n="main.menu.logout"></a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <section id="default-notification" class="container">
+                              <div id="default-alert-error" class="alert alert-danger fade in" role="alert">
+                                <button type="button" class="close" data-dismiss="alert">
+                                  <span aria-hidden="true">&times;</span>
+                                  <span class="sr-only">Close</span>
+                                </button>
+                                <span id="default-alert-error-text"></span>
+                              </div>
+                            </section>
+                            <div id="main-container" class="v-m">
+                            
+                              <span class="glyphicon glyphicon-refresh rotating"></span>
+                            
+                            </div>
+                            <section id="footer"></section>
+                            <script src="//code.jquery.com/jquery.min.js"></script>
+                            <script src="js/jquery-validator/jquery.validate.min.js"></script>
+                            <script src="js/jquery-validator/additional-methods.min.js"></script>
+                            <script src="js/jquery-validator/localization/messages_es.js"></script>
+                            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+                            <script type="text/javascript"
+                                    src="http://maps.googleapis.com/maps/api/js?key=AIzaSyABeQNpgBFoKcPP5TTGsUJW4L3qKVI19t4&libraries=places"></script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/3.2.0/screenfull.min.js"></script>
+                            <script src="js/bootstrapValidator/bootstrapValidator.min.js"></script>
+                            <script src="js/bootstrap-switch/bootstrap-switch.min.js"></script>
+                            <script src="js/ajaxtemplate.js"></script>
+                            <script src="js/i18next.min.js"></script>
+                            <script src="js/underscore-min.js"></script>
+                            <script src="js/dateFormat.js"></script>
+                            <script src="js/moment-with-locales.js"></script>
+                            <script src="js/moment-timezone.js"></script>
+                            <script src="js/moment-duration-format.js"></script>
+                            <script src="js/bootstrap-sortable.js"></script>
+                            <script src="js/moustache.min.js"></script>
+                            <script src="js/inm.core.js"></script>
+                            <script src="js/inm.ui.js"></script>
+                            <script src="js/inm.carrier.js"></script>
+                            <script src="js/inm.carrier.ui.js"></script>
+                            <script src="js/d3.min.js"></script>
+                            <script src="js/intl-tel-input/intlTelInput.min.js"></script>
+                            <script src="js/pickadate/picker.js"></script>
+                            <script src="js/pickadate/picker.date.js"></script>
+                            <script src="js/pickadate/picker.time.js"></script>
+                            <script src="js/pickadate/translations/es_ES.js"></script>
+                            <script>
+                              //Old browser warning
+                              var $buoop = {
+                                vs: {
+                                  i: 10
+                                },
+                                reminder: 0
+                              };
+                              function $buo_f() {
+    var e = document.createElement("script");
+    e.src = "//browser-update.org/update.js";
+    document.body.appendChild(e);
+  }
+  try {
+    document.addEventListener("DOMContentLoaded", $buo_f, false);
+  } catch (e) {
+    window.attachEvent("onload", $buo_f);
+  }
+</script>
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-51361410-1', 'carrier.inminute.com');
+</script>
+<script type="text/javascript">
+  $(function () {
+    if (!inminute.session.checkUserSession()) {
+      window.location = 'index.html';
+    } else {
+      var prop = {
+        container: $('#main-container'),
+        defaultContent: 'parcel/ongoing.html',
+        afterLoad: function (url) {
+          $('#main-container').i18n();
+          ga('send', 'pageview', {
+            'page': url
+          });
+        }
+      };
+      i18n.init(function () {
+        i18n.loadNamespace('validationForm', function () {
+          $.fn.bootstrapValidator.loadLanguage();
+        });
+        $('body').i18n();
+        inminute.api.carrier.me(function (data) {
+          if (data.carrierId && data.carrierId === 11) {
+            $('#newParcel a').attr("href", "#parcel/new_mexpress");
+          }
+          $('.navbar-brand').html(data.carrier.name);
+          $('#menuUserNameText').html(data.name);
+          AjaxTemplate.init(prop);
+        });
+      });
+    }
+    $('.disabled').click(function (e) {
+      e.preventDefault();
+    })
+    //Footer
+    $.get("footer.html", function (data) {
+      $("#footer").replaceWith(data);
+    });
+  });
+
+  function logout() {
+    inminute.api.carrier.logout(function () {
+      location = './';
+    });
+  }
+  //# sourceURL=InCourierMain.js
+
+</script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario Planb</title>
+    <link type="text/css" href="../css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="../js/validar.js"></script>
+</head>
+<body>
+        <nav>
+                <ul class="menu">
+                        <li class="nivel1"><a href="inicio.html" class="nivel1">Inicio</a>
+                         <li class="nivel1"><a href="empresa.html" class="nivel1">Empresa</a>
+                         <li class="nivel1"><a href="Servicios.html" class="nivel1">Servicios</a>
+                         <li class="nivel1"><a href="publicidad.html" class="nivel1">Publicidad</a>
+                         <li class="nivel1"><a href="flota.html" class="nivel1">Flota</a>
+                         <li class="nivel1"><a href="contacto.html" class="nivel1">Contacto</a>                    
+                         <li class="nivel1"><a href="pedidos.html" class="nivel1">Pedidos</a>                
+                         <li class="nivel1"><a href="singup.html" class="sing.html">Sing up</a> 
+                </ul> 
+        </nav>
+        <form id="formulario1" method="get" onsubmit="validar()">
+        <div id="registrar">
+                <a href="../html/app/registro.html"></a>Nuevo Usuario</a>
+                </div> <!-- fin opcion-->
+
+                <div id="bienvenidos">
+                        <h1>¡Bienvenidos!</h1>
+                        <h2>El plan b de bici</h2>
+                        <h3>Ideas que mejoran tu mundo</h3>
+                    </div>
+                 
+                    <div id="envoltura">
+                        <div id="contenedor">
+                 
+                            <div id="cabecera" >
+                                <img src="../css/imagenes/planb.png" height="70px">
+                            </div>
+                 
+                            <div id="cuerpo">
+                                <form id="form-login" action="" method="post" autocomplete="off">
+                                    <!--A saber, el atributo for funciona como el id.-->
+                                    <!--ejemplo <label for="usuario">Usuario:</label>-->
+                                    <!--required es nuevo en html5, si el campo está vacío te avisa, pero cuidado, no valida la información-->
+                                    <p><label >Usuario:</label></p>
+                                        <input name="usuario" type="text" id="usuario" placeholder="Ingresa Usuario" autofocus="" required=""></p>
+                 
+                                    <p><label>Contraseña:</label></p>
+                                        <input name="contrasenia" type="password" id="contrasenia" placeholder="Ingresa Password" required=""></p>
+                                       
+                                        <p><label>Administrador:</label></p>
+                                        <input name="administrador" type="list"  list="listadeadministrador" id="administrador" placeholder="Elige una opción" required=""></p>
+                                        <datalist id="listadeadministrador">
+                                            <option value="Cliente">
+                                            <option value="Ciclomensajero">
+                                        </datalist>
+                                    <p><label>Fecha de alta:</label></p>
+                                    <input name="Alta" type="text" id="alta" placeholder="Ingresa date" autofocus="" required=""></p>
+
+                                    <p><label>Fecha de baja:</label></p>
+                                    <input name="baja" type="text" id="baja" placeholder="Ingresa date" autofocus="" required=""></p>
+                 
+                 
+                                    <p id="bot"><input type="submit" id="submit" name="submit" value="Aceptar" class="boton">
+                                        <input type="submit" id="submitc" name="submitc" value="Cancelar" class="boton">
+                                    </p>
+                                </form>
+                            </div><!--fin cuerpo-->
+                 
+                            <div id="pie">Registrese para ser un nuevo usuario</div>
+                            <p id="bot"><input type="submit" id="submit" name="submit" value="Nuevo Usuario" class="boton">
+                        </div><!-- fin contenedor -->
+                    </div><!--fin envoltura-->
+
+        
+
+
+</body>
+
+</html>
