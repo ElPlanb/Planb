@@ -280,6 +280,7 @@ padding : 15px 20px;
 transition : transform 0.3s;
 }
 .hover_effect_btn a::before {
+background : none 0 0 repeat scroll #F19F5B;
 background : none 0 0 repeat scroll #00AFF0;
 color : #fff;
 height : 100%;
@@ -353,7 +354,7 @@ height : 650px;
 width : 100%;
 }
 .left_crousel_btn, .right_crousel_btn {
-color : #F19F5B;
+color : #fff;
 height : 20px;
 position : absolute;
 text-align : center;
@@ -400,7 +401,7 @@ width : 25px;
 .carousel-indicators .active {
 width : 25px;
 height : 7px;
-background-color : #F19F5B;
+background-color : rgb(241, 142, 12);
 }
 #counting_sec {
 background : none 0 0 repeat scroll #f0f0f0;
@@ -457,7 +458,7 @@ padding-bottom : 30px;
 }
 .service i {
 font-size : 50px;
-color : #03B0F0;
+color : rgb(241, 142, 12);
 position : relative;
 }
 .service_hoverly {
@@ -499,14 +500,14 @@ text-align : center;
 width : 130px;
 }
 .sngl_team span {
-color : #00aff0;
+color : rgb(241, 142, 12);
 font-family : lato;
 font-size : 13px;
 margin-left : 10px;
 text-transform : uppercase;
 }
 .all_team .owl-controls .owl-prev i {
-color : #3399ff;
+color : rgb(241, 142, 12);
 font-size : 30px;
 position : absolute;
 top : 46%;
@@ -516,7 +517,7 @@ left : 0;
 position : absolute;
 top : 46%;
 font-size : 30px;
-color : #3399FF;
+color : rgb(241, 142, 12);
 right : 0%;
 }
 .all_team .owl-controls .owl-dot {
@@ -531,7 +532,7 @@ width : 25px;
 margin-right : 5px;
 }
 .all_team .owl-controls .owl-dot.active {
-background-color : #03B0F0;
+background-color : rgb(241, 142, 12);
 }
 .all_team .owl-controls {
 display : inline-block;
@@ -592,7 +593,7 @@ width : 25px;
 margin-right : 5px;
 }
 #tstm_sec .owl-controls .owl-dot.active {
-background-color : #03B0F0;
+background-color : rgb(241, 142, 12);
 }
 #tstm_sec .owl-controls {
 display : inline-block;
@@ -617,7 +618,7 @@ font-family : lato;
 text-transform : capitalize;
 }
 .lts_pst a:hover {
-border-bottom : 1px solid #00AFF0;
+border-bottom : 1px solid #F19F5B;
 }
 .sngl_pricing ul {
 border : #ebebeb solid 5px;
@@ -695,7 +696,7 @@ font-size : 24px;
 text-transform : none;
 }
 .btn.pricing_btn {
-background : none 0 0 repeat scroll #F19F5B;
+background : none 0 0 repeat scroll rgb(241, 142, 12);
 border : #666666 solid 1px;
 color : #fff;
 text-transform : uppercase;
@@ -732,7 +733,7 @@ background : #353638;
 padding : 10px 35px;
 }
 #cnt_form .form-control:focus {
-border : #0080FF solid 1px;
+border : rgb(241, 142, 12) solid 1px;
 }
 .cnt_info ul {
 margin : 0;
@@ -781,7 +782,7 @@ transition: all 1s ease 0s;
 -webkit-transition: all 1s ease 0s
 }
 .ft ul li a i:hover {
-color : #00AFF0;transition: all 1s ease 0s;
+color : rgb(241, 142, 12);transition: all 1s ease 0s;
 -moz-transition: all 1s ease 0s;
 -webkit-transition: all 1s ease 0s
 }
@@ -826,7 +827,7 @@ color : #fff;
 margin-left : 15px;
 }
 .show_hide {
-color : #3399FF;
+color : rgb(241, 142, 12);
 margin-left : 15px;
 }
 #blg_sec {
@@ -838,7 +839,7 @@ border : none 0;
 margin : 0;
 }
 .post_info i {
-background : none 0 0 repeat scroll #00aff0;
+background : none 0 0 repeat scroll rgb(241, 142, 12);
 color : #fff;
 float : left;
 font-size : 30px;
@@ -922,7 +923,7 @@ text-transform : capitalize;transition: all 1s ease 0s;
 }
 .sidebar ul li a:hover{transition: all 1s ease 0s;
 -moz-transition: all 1s ease 0s;
--webkit-transition: all 1s ease 0s;color:#00AFF0}
+-webkit-transition: all 1s ease 0s;color:rgb(241, 142, 12)}
 .flickr li {
 border : 0 !important ;
 }
@@ -979,4 +980,13 @@ width : 355px !important ;
 }
 .single_cnt_m {
 width : 731px !important ;
+}
+#register{
+	float:left;
+	width:80%;
+	font-size:24px;
+	font-weight:bold;
+	color:#FFF;
+	text-align:center;
+	background: #333333;
 }
