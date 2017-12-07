@@ -24,7 +24,6 @@ if(!empty($_POST)){
       $password = $_POST["password"];
 			
       $user_id=null;
-      $user_role=null;
       $sql1= "SELECT * FROM usuarios WHERE nombre = '".$name."' AND pass= '".$password."'";
       // echo $sql1;
       // $sql1= 'SELECT * FROM usuarios WHERE (nombre=\"$_POST[username]\") AND pass=\"$_POST[password]\" ';
@@ -39,22 +38,15 @@ if(!empty($_POST)){
 			// while ($r=$query->fetch_array()) {
       while ($r=mysqli_fetch_assoc($query)) {
       // while ($r=mysqli_fetch_array($result)) {
-        $user_id=$r["nombre"];
-        $user_role=$r["idrole"];
+				$user_id=$r["nombre"];
 				break;
 			}
 			if($user_id==null){
 				print "<script>alert(\"Acceso invalido.\");window.location='login.html';</script>";
 			}else{
 				session_start();
-        $_SESSION["user_id"]=$user_id;
-        if($user_role==1){
-          print "<script>window.location='indexadmin.php';</script>";
-        }else{
-          print "<script>window.location='home.php';</script>";				
-        }
-        // print "<script>window.location='home.php';</script>";				
-        	
+				$_SESSION["user_id"]=$user_id;
+				print "<script>window.location='envio.html';</script>";				
 			}
 		}
 	}
